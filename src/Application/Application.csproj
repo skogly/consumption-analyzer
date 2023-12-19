@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="MQTTnet" Version="4.1.2.350" />
+    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.1.2.350" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common/" />
+    <Folder Include="Features/" />
+    <Folder Include="Infrastructure/" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+  consumption-analyzer:
+    image: "127.0.0.1:4000/andy/consumption-analyzer"
+    container_name: consumption-analyzer
+    restart: always
+    hostname: "consumption-analyzer"
+    ports:
+      - "9933:80"
+    environment:
+      - TZ=Europe/Oslo
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes:
+      - "./logs:/app/logs"
+      - "./config:/app/Config"
+    networks:
+      - power_net
+
+networks:
+  power_net:
+    external: true
